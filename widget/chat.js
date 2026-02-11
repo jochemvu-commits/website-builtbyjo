@@ -431,39 +431,67 @@
             color: #9ca3af;
         }
 
-        /* Animations */
-        @keyframes bj-fade-in-up {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        @keyframes bj-bounce {
-            0%, 80%, 100% { transform: scale(0); }
-            40% { transform: scale(1); }
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 480px) {
-            #bjWidget .bj-toggle {
-               margin-right: -8px; /* Slight adjustment for padding */
+            #bjWidget .bj-link {
+                color: ${config.color};
+                text-decoration: underline;
+                font-weight: 500;
             }
             
-            #bjWidget .bj-window {
-                position: fixed;
-                bottom: 100px; /* Above toggle with space */
-                right: 8px; /* 16px total distinct space (8px + widget wrapper right 24px is weird logic here) Wait, widget fixed 24px right. */
-                /* Let's override fixed positioning logic for mobile to be simpler */
-                width: calc(100vw - 32px); /* 16px margin each side */
-                height: calc(100vh - 120px);
-                right: 0; /* Align relative to wrapper */
+            #bjWidget .bj-link:hover {
+                opacity: 0.8;
             }
             
-            #bjWidget {
-                 right: 16px;
-                 bottom: 16px;
-                 align-items: flex-end; /* Keep aligned right */
+            #bjWidget .bj-calendly-btn {
+                display: block;
+                width: 100%;
+                background-color: ${config.color};
+                color: #ffffff !important;
+                text-align: center;
+                padding: 10px 20px;
+                border-radius: 8px;
+                text-decoration: none !important;
+                font-weight: 600;
+                margin-top: 8px;
+                margin-bottom: 8px;
+                transition: opacity 0.2s ease;
             }
-        }
+            
+            #bjWidget .bj-calendly-btn:hover {
+                opacity: 0.9;
+            }
+
+            /* Animations */
+            @keyframes bj-fade-in-up {
+                from { opacity: 0; transform: translateY(10px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            @keyframes bj-bounce {
+                0%, 80%, 100% { transform: scale(0); }
+                40% { transform: scale(1); }
+            }
+            
+            /* Mobile Responsive */
+            @media (max-width: 480px) {
+                #bjWidget .bj-toggle {
+                   margin-right: -8px; /* Slight adjustment for padding */
+                }
+                
+                #bjWidget .bj-window {
+                    position: fixed;
+                    bottom: 100px; /* Above toggle with space */
+                    right: 8px; /* 16px total distinct space */
+                    width: calc(100vw - 32px); /* 16px margin each side */
+                    height: calc(100vh - 120px);
+                    right: 16px; 
+                }
+                
+                #bjWidget {
+                     right: 16px;
+                     bottom: 16px;
+                     align-items: flex-end; /* Keep aligned right */
+                }
+            }
     `;
 
     // Inject Styles
@@ -543,11 +571,22 @@
     const resetBtn = widgetContainer.querySelector('.bj-reset-btn');
     const notificationDot = widgetContainer.querySelector('.bj-notification-dot');
 
-    // Helper: Parse Markdown (Basic)
+    // Helper: Parse Markdown (Basic + URLs)
     function parseMarkdown(text) {
         if (!text) return '';
+        let html = text;
+
+        // URLs -> Links
+        const urlRegex = /(https?:\/\/[^\s]+)/g;
+        html = html.replace(urlRegex, (url) => {
+            if (url.includes('calendly.com')) {
+                return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="bj-calendly-btn">Book a Free Call →</a>`;
+            }
+            return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="bj-link">${url}</a>`;
+        });
+
         // Bold
-        let html = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         // Newlines
         html = html.replace(/\n/g, '<br>');
         return html;
