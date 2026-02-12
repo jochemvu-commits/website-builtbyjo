@@ -51,7 +51,7 @@
         <!-- Hero -->
         <section class="hero section-dark" style="padding-bottom: 60px;">
             <div class="container">
-                <h1>Built by <span class="text-accent">Jay</span></h1>
+                <h1>About built<span class="text-accent">by</span>jo</h1>
                 <p>A one-person agency with a simple mission: help service businesses never miss a customer again.</p>
             </div>
         </section>
@@ -64,21 +64,16 @@
 
                     <!-- Photo placeholder -->
                     <div>
-                        <div class="card"
-                            style="aspect-ratio: 3/4; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--bg-card) 0%, var(--accent-glow) 100%);">
-                            <div style="text-align: center; color: var(--text-muted);">
-                                <p style="font-size: 4rem; margin-bottom: 16px;">👋</p>
-                                <p>Photo coming soon</p>
-                            </div>
+                        <div class="card" style="padding: 0; overflow: hidden; aspect-ratio: 3/4;">
+                            <img src="Images/jay.png" alt="Jay - Founder of builtbyjo"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
 
                         <div class="mt-4">
                             <p class="text-muted" style="font-size: 0.9rem;">
-                                <strong style="color: var(--text-primary);">Location:</strong> Romania (originally from
-                                Belgium)<br>
-                                <strong style="color: var(--text-primary);">Markets:</strong> UK, Ireland, Australia,
-                                Netherlands, Belgium<br>
-                                <strong style="color: var(--text-primary);">Languages:</strong> English, Dutch
+                                <strong style="color: var(--text-primary);">Location:</strong> Romania<br>
+                                <strong style="color: var(--text-primary);">Working internationally with English and
+                                    Dutch-speaking businesses</strong>
                             </p>
                         </div>
                     </div>
@@ -88,7 +83,8 @@
                         <h2 class="mb-4">The Story</h2>
 
                         <p style="font-size: 1.1rem; color: var(--text-primary); margin-bottom: 24px;">
-                            Hey, I'm Jay. I built builtbyjo because I kept seeing the same problem over and over again.
+                            Hey, I'm Jochem Van Uytfanghe — most people just call me Jay. I started builtbyjo because
+                            I kept seeing the same problem over and over again.
                         </p>
 
                         <p style="margin-bottom: 20px;">
@@ -179,10 +175,9 @@
                 <h2 class="text-center mb-4">Why Romania?</h2>
 
                 <p class="text-center" style="font-size: 1.1rem;">
-                    People sometimes ask why I'm based in Romania. Honestly? Quality of life, cost of living, and it
-                    lets me price my services competitively without cutting corners. I work European hours, which means
-                    I'm available during business hours for UK, Ireland, Netherlands, and Belgium — and early morning
-                    for Australia.
+                    People sometimes ask why I'm based in Romania. Quality of life, cost of living, and it lets me price
+                    my services competitively without cutting corners. I work European hours, which means I'm available
+                    during business hours for all my clients — whether they're in Western Europe, the UK, or Australia.
                 </p>
 
                 <p class="text-center mt-4 text-muted">
@@ -263,7 +258,7 @@
         }
 
         // Load saved theme
-        (function() {
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
                 document.documentElement.setAttribute('data-theme', savedTheme);

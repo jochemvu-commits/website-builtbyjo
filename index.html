@@ -66,15 +66,14 @@
 
                 <h1>Your AI Employee for<br><span class="text-accent">Website, WhatsApp & Phone</span></h1>
 
-                <p>Never miss a customer again. Our AI agents handle your website chat, WhatsApp messages, and phone calls 24/7 — booking appointments and answering questions while you focus on your business.</p>
+                <p>Never miss a customer again. Our AI agents handle your website chat, WhatsApp messages, and phone
+                    calls 24/7 — booking appointments and answering questions while you focus on your business.</p>
 
                 <div class="hero-buttons">
                     <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-primary btn-lg">
                         Book a Free Call →
                     </a>
-                    <a href="https://wa.me/15164352731" target="_blank" class="btn btn-secondary btn-lg">
-                        💬 Try the Demo
-                    </a>
+
                 </div>
 
                 <div class="mt-4">
@@ -95,11 +94,13 @@
                     <div class="card feature-card">
                         <div class="feature-icon">🌐</div>
                         <h4>Website AI Chatbot</h4>
-                        <p>Turns website visitors into customers. Answers questions, captures leads, and books appointments — right on your site.</p>
+                        <p>Turns website visitors into customers. Answers questions, captures leads, and books
+                            appointments — right on your site.</p>
                         <p class="mt-2">
                             <del style="color: var(--text-muted); font-size: 0.9rem;">€199</del>
                             <strong class="text-accent" style="margin-left: 8px;">€99/month</strong>
-                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding Price</span>
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding
+                                Price</span>
                         </p>
                         <a href="products.html#website" class="btn btn-outline btn-sm mt-3">Learn More →</a>
                     </div>
@@ -112,7 +113,8 @@
                         <p class="mt-2">
                             <del style="color: var(--text-muted); font-size: 0.9rem;">€249</del>
                             <strong class="text-accent" style="margin-left: 8px;">€149/month</strong>
-                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding Price</span>
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding
+                                Price</span>
                         </p>
                         <a href="products.html#whatsapp" class="btn btn-outline btn-sm mt-3">Learn More →</a>
                     </div>
@@ -125,7 +127,8 @@
                         <p class="mt-2">
                             <del style="color: var(--text-muted); font-size: 0.9rem;">€249</del>
                             <strong class="text-accent" style="margin-left: 8px;">€199/month</strong>
-                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding Price</span>
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding
+                                Price</span>
                         </p>
                         <a href="products.html#voice" class="btn btn-outline btn-sm mt-3">Learn More →</a>
                     </div>
@@ -134,11 +137,13 @@
                         <div class="pricing-badge">Best Value</div>
                         <div class="feature-icon">🎯</div>
                         <h4>Complete Bundle</h4>
-                        <p>All three AI employees working together. Full coverage across website, WhatsApp, and phone 24/7.</p>
+                        <p>All three AI employees working together. Full coverage across website, WhatsApp, and phone
+                            24/7.</p>
                         <p class="mt-2">
                             <del style="color: var(--text-muted); font-size: 0.9rem;">€597</del>
                             <strong class="text-accent" style="margin-left: 8px;">€349/month</strong>
-                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding Price — Save €248</span>
+                            <span style="font-size: 0.85rem; color: var(--text-muted); display: block;">Founding Price —
+                                Save €248</span>
                         </p>
                         <a href="products.html#bundle" class="btn btn-primary btn-sm mt-3">Get the Bundle →</a>
                     </div>
@@ -426,11 +431,13 @@
             localStorage.setItem('theme', newTheme);
         }
 
-        // Load saved theme
-        (function() {
+        // Load saved theme (default to light on homepage)
+        (function () {
             const savedTheme = localStorage.getItem('theme');
             if (savedTheme) {
                 document.documentElement.setAttribute('data-theme', savedTheme);
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
             }
         })();
 
@@ -457,6 +464,7 @@
                 grid-template-columns: repeat(2, 1fr) !important;
             }
         }
+
         @media (max-width: 600px) {
             .feature-grid[style*="grid-template-columns: repeat(4"] {
                 grid-template-columns: 1fr !important;
