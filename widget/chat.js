@@ -167,7 +167,7 @@
             width: 40px;
             height: 40px;
             border-radius: 50%;
-            background: linear-gradient(135deg, ${config.color}, #8b5cf6);
+            background: transparent;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -594,7 +594,7 @@
         <div class="bj-window">
             <div class="bj-header">
                 <div class="bj-header-info">
-                    <div class="bj-avatar">K</div>
+                    <div class="bj-avatar"><img src="/widget/logo.png" style="width:40px;height:40px;border-radius:50%;" alt="Kai"></div>
                     <div class="bj-title-area">
                         <div class="bj-name">${config.name}</div>
                         <div class="bj-status">
