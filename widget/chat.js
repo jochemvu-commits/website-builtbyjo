@@ -4,8 +4,8 @@
     const config = {
         api: currentScript.dataset.api,
         businessId: currentScript.dataset.businessId,
-        name: currentScript.dataset.name || 'Assistant',
-        greeting: currentScript.dataset.greeting || 'Hello! How can I help you today?',
+        name: currentScript.dataset.name || 'builtbyjo',
+        greeting: currentScript.dataset.greeting || "Hey! 👋 I'm Jay's AI assistant. What brings you here?",
         color: currentScript.dataset.color || '#3b82f6'
     };
 
@@ -618,7 +618,7 @@
         <div class="bj-window">
             <div class="bj-header">
                 <div class="bj-header-info">
-                    <div class="bj-avatar"><img src="/widget/logo.png" style="width:40px;height:40px;border-radius:50%;" alt="Kai"></div>
+                    <div class="bj-avatar"><img src="/widget/logo.png" style="width:40px;height:40px;border-radius:50%;" alt="builtbyjo"></div>
                     <div class="bj-title-area">
                         <div class="bj-name">${config.name}</div>
                         <div class="bj-status">
