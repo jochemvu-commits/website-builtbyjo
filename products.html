@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Products — AI WhatsApp & Voice Agents | builtbyjo</title>
     <meta name="description"
         content="WhatsApp AI Assistant from €149/mo, AI Voice Agent from €199/mo, or bundle both from €299/mo. AI employees that handle customer communication 24/7.">
@@ -30,7 +31,7 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-inner">
-                <a href="/" class="logo">built<span>by</span>jo</a>
+                <a class="logo" href="/">built<span style="color:var(--accent)">by</span>jo</a>
 
                 <div class="nav-toggle" onclick="toggleNav()">
                     <span></span>
@@ -43,16 +44,12 @@
                     <a href="products.html" class="active">Products</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
                     <div class="nav-lang">
                         <a href="products.html" class="active">EN</a>
                         <span>|</span>
                         <a href="products-nl.html">NL</a>
                     </div>
-                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Book a Call</a>
+                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Book a Free Call</a>
                 </div>
             </div>
         </nav>
@@ -105,7 +102,8 @@
                             <li>Custom branding & colors</li>
                         </ul>
 
-                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-outline">Get Started →</a>
+                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-outline">Book a Free Call
+                            →</a>
                     </div>
 
                     <!-- Card 2: WhatsApp AI Assistant -->
@@ -140,7 +138,8 @@
                             <li>Works with your booking system</li>
                         </ul>
 
-                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-outline">Get Started →</a>
+                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-outline">Book a Free Call
+                            →</a>
                     </div>
                 </div>
 
@@ -183,7 +182,8 @@
                             <li>Custom greeting & personality</li>
                         </ul>
 
-                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-outline">Get Started →</a>
+                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-outline">Book a Free Call
+                            →</a>
                     </div>
 
                     <!-- Card 4: Voice Pro -->
@@ -222,7 +222,8 @@
                             <li>Transfers urgent calls to you</li>
                         </ul>
 
-                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-primary">Get Started →</a>
+                        <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-primary">Book a Free Call
+                            →</a>
                     </div>
                 </div>
 
@@ -512,7 +513,7 @@
 
                 <div class="text-center mt-5">
                     <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-primary btn-lg">
-                        Book a Free Call to Discuss →
+                        Book a Free Call →
                     </a>
                 </div>
             </div>
@@ -527,7 +528,7 @@
                     <p style="max-width: 500px; margin: 0 auto 32px;">Book a free call. We'll learn about your business
                         and recommend the right solution — no pressure, no commitment.</p>
                     <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-primary btn-lg">
-                        Let's Talk →
+                        Book a Free Call →
                     </a>
                 </div>
             </div>
@@ -554,7 +555,7 @@
                         <h5>Company</h5>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
-                        <a href="https://calendly.com/builtbyjo/free-call">Book a Call</a>
+                        <a href="https://calendly.com/builtbyjo/free-call">Book a Free Call →</a>
                     </div>
 
                     <div class="footer-col">
@@ -577,22 +578,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Theme toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Load saved theme
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            }
-        })();
+        document.documentElement.setAttribute('data-theme', 'dark');
     </script>
 
     <style>

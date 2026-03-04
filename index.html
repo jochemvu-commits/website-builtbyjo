@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>builtbyjo — AI Chatbots for Website, WhatsApp & Phone</title>
     <meta name="description"
         content="Never miss a customer again. AI employees that handle your website chat, WhatsApp messages, and phone calls 24/7. Built for gyms, salons, clinics, and restaurants.">
@@ -37,7 +38,7 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-inner">
-                <a href="/" class="logo">built<span>by</span>jo</a>
+                <a class="logo" href="/">built<span style="color:var(--accent)">by</span>jo</a>
 
                 <div class="nav-toggle" onclick="toggleNav()">
                     <span></span>
@@ -50,16 +51,12 @@
                     <a href="products.html">Products</a>
                     <a href="about.html">About</a>
                     <a href="contact.html">Contact</a>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
                     <div class="nav-lang">
                         <a href="index.html" class="active">EN</a>
                         <span>|</span>
                         <a href="index-nl.html">NL</a>
                     </div>
-                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Book a Call</a>
+                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Book a Free Call →</a>
                 </div>
             </div>
         </nav>
@@ -168,7 +165,7 @@
                 <div class="steps-grid">
                     <div class="step-card">
                         <div class="step-number">1</div>
-                        <h4 style="color: var(--text-dark);">Book a Call</h4>
+                        <h4 style="color: var(--text-dark);">Book a Free Call →</h4>
                         <p>15-minute discovery call. Tell us about your business and how you handle customer inquiries
                             today.</p>
                     </div>
@@ -422,7 +419,7 @@
                     <p style="max-width: 500px; margin: 0 auto 32px;">Book a free 15-minute call. We'll show you exactly
                         how the AI would work for your business — no pressure, no pushy sales tactics.</p>
                     <a href="https://calendly.com/builtbyjo/free-call" class="btn btn-primary btn-lg">
-                        Book Your Free Call →
+                        Book a Free Call →
                     </a>
                 </div>
             </div>
@@ -449,7 +446,7 @@
                         <h5>Company</h5>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
-                        <a href="https://calendly.com/builtbyjo/free-call">Book a Call</a>
+                        <a href="https://calendly.com/builtbyjo/free-call">Book a Free Call →</a>
                     </div>
 
                     <div class="footer-col">
@@ -473,24 +470,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Theme toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Load saved theme (default to light on homepage)
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            } else {
-                document.documentElement.setAttribute('data-theme', 'light');
-            }
-        })();
+        document.documentElement.setAttribute('data-theme', 'dark');
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(button => {

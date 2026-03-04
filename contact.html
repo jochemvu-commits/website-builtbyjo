@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Contact — Get in Touch | builtbyjo</title>
     <meta name="description" content="Book a free discovery call or send us a message. We respond within 24 hours.">
     <link rel="canonical" href="https://builtbyjo.co/contact">
@@ -29,7 +30,7 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-inner">
-                <a href="/" class="logo">built<span>by</span>jo</a>
+                <a class="logo" href="/">built<span style="color:var(--accent)">by</span>jo</a>
 
                 <div class="nav-toggle" onclick="toggleNav()">
                     <span></span>
@@ -42,16 +43,12 @@
                     <a href="products.html">Products</a>
                     <a href="about.html">About</a>
                     <a href="contact.html" class="active">Contact</a>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
                     <div class="nav-lang">
                         <a href="contact.html" class="active">EN</a>
                         <span>|</span>
                         <a href="contact-nl.html">NL</a>
                     </div>
-                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Book a Call</a>
+                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Book a Free Call →</a>
                 </div>
             </div>
         </nav>
@@ -72,7 +69,7 @@
 
                     <!-- Left: Calendly -->
                     <div>
-                        <h3 class="mb-3">Book a Free Call</h3>
+                        <h3 class="mb-3">Book a Free Call →</h3>
                         <p class="mb-4">15-minute discovery call. No sales pitch — just a conversation about your
                             business and whether I can help.</p>
 
@@ -214,7 +211,7 @@
                         <h5>Company</h5>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
-                        <a href="https://calendly.com/builtbyjo/free-call">Book a Call</a>
+                        <a href="https://calendly.com/builtbyjo/free-call">Book a Free Call →</a>
                     </div>
 
                     <div class="footer-col">
@@ -237,22 +234,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Theme toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Load saved theme
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            }
-        })();
+        document.documentElement.setAttribute('data-theme', 'dark');
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(button => {

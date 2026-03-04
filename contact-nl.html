@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Contact — Neem Contact Op | builtbyjo</title>
     <meta name="description" content="Plan een gratis gesprek of stuur ons een bericht. We reageren binnen 24 uur.">
     <link rel="canonical" href="https://builtbyjo.co/contact-nl.html">
@@ -29,7 +30,7 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-inner">
-                <a href="index-nl.html" class="logo">built<span>by</span>jo</a>
+                <a class="logo" href="index-nl.html">built<span style="color:var(--accent)">by</span>jo</a>
 
                 <div class="nav-toggle" onclick="toggleNav()">
                     <span></span>
@@ -42,16 +43,12 @@
                     <a href="products-nl.html">Producten</a>
                     <a href="about-nl.html">Over mij</a>
                     <a href="contact-nl.html" class="active">Contact</a>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
                     <div class="nav-lang">
                         <a href="contact.html">EN</a>
                         <span>|</span>
                         <a href="contact-nl.html" class="active">NL</a>
                     </div>
-                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Plan een Gesprek</a>
+                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Plan een Gratis Gesprek →</a>
                 </div>
             </div>
         </nav>
@@ -72,7 +69,7 @@
 
                     <!-- Left: Calendly -->
                     <div>
-                        <h3 class="mb-3">Plan een Gratis Gesprek</h3>
+                        <h3 class="mb-3">Plan een Gratis Gesprek →</h3>
                         <p class="mb-4">15-minuten kennismakingsgesprek. Geen verkooppraatje — gewoon een gesprek over
                             jouw bedrijf en of ik kan helpen.</p>
 
@@ -218,7 +215,7 @@
                         <h5>Bedrijf</h5>
                         <a href="about-nl.html">Over mij</a>
                         <a href="contact-nl.html">Contact</a>
-                        <a href="https://calendly.com/builtbyjo/free-call">Plan een Gesprek</a>
+                        <a href="https://calendly.com/builtbyjo/free-call">Plan een Gratis Gesprek →</a>
                     </div>
 
                     <div class="footer-col">
@@ -241,22 +238,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Theme toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Load saved theme
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            }
-        })();
+        document.documentElement.setAttribute('data-theme', 'dark');
 
         // FAQ accordion
         document.querySelectorAll('.faq-question').forEach(button => {

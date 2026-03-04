@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Over mij — Ontmoet Jay | builtbyjo</title>
     <meta name="description"
         content="builtbyjo is een door de oprichter geleid AI-automatiseringsbureau gevestigd in Roemenië, dat bedrijven bedient in het VK, Ierland, Australië, Nederland en België.">
@@ -33,7 +34,7 @@
         <!-- Navigation -->
         <nav>
             <div class="nav-inner">
-                <a href="index-nl.html" class="logo">built<span>by</span>jo</a>
+                <a class="logo" href="index-nl.html">built<span style="color:var(--accent)">by</span>jo</a>
 
                 <div class="nav-toggle" onclick="toggleNav()">
                     <span></span>
@@ -46,16 +47,12 @@
                     <a href="products-nl.html">Producten</a>
                     <a href="about-nl.html" class="active">Over mij</a>
                     <a href="contact-nl.html">Contact</a>
-                    <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
-                        <span class="icon-sun">☀️</span>
-                        <span class="icon-moon">🌙</span>
-                    </button>
                     <div class="nav-lang">
                         <a href="about.html">EN</a>
                         <span>|</span>
                         <a href="about-nl.html" class="active">NL</a>
                     </div>
-                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Plan een Gesprek</a>
+                    <a href="https://calendly.com/builtbyjo/free-call" class="nav-cta">Plan een Gratis Gesprek →</a>
                 </div>
             </div>
         </nav>
@@ -238,7 +235,7 @@
                         <h5>Bedrijf</h5>
                         <a href="about-nl.html">Over mij</a>
                         <a href="contact-nl.html">Contact</a>
-                        <a href="https://calendly.com/builtbyjo/free-call">Plan een Gesprek</a>
+                        <a href="https://calendly.com/builtbyjo/free-call">Plan een Gratis Gesprek →</a>
                     </div>
 
                     <div class="footer-col">
@@ -261,22 +258,7 @@
             document.getElementById('navLinks').classList.toggle('active');
         }
 
-        // Theme toggle
-        function toggleTheme() {
-            const html = document.documentElement;
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
-            html.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-        }
-
-        // Load saved theme
-        (function () {
-            const savedTheme = localStorage.getItem('theme');
-            if (savedTheme) {
-                document.documentElement.setAttribute('data-theme', savedTheme);
-            }
-        })();
+        document.documentElement.setAttribute('data-theme', 'dark');
     </script>
 
     <style>
