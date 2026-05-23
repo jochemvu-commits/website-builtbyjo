@@ -6,7 +6,10 @@
         businessId: currentScript.dataset.businessId,
         name: currentScript.dataset.name || 'builtbyjo',
         greeting: currentScript.dataset.greeting || "Hey! 👋 I'm Jay's AI assistant. What brings you here?",
-        color: currentScript.dataset.color || '#3b82f6'
+        color: currentScript.dataset.color || '#3b82f6',
+        logo: currentScript.dataset.logo || '',
+        hideBranding: currentScript.dataset.branding === 'false',
+        contactEmail: currentScript.dataset.contactEmail || 'jay@builtbyjo.co'
     };
 
     // State
@@ -618,12 +621,28 @@
         reset: `<svg class="bj-reset-icon" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M224,48v48a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h26.49A88.17,88.17,0,0,0,45.8,92.56a8,8,0,0,1-13.6-8.24A104.18,104.18,0,0,1,199.18,80H176a8,8,0,0,1,0-16h40A8,8,0,0,1,224,48ZM210.2,155.44a8,8,0,0,0-13.6,8.24A88.17,88.17,0,0,1,61.51,152H88a8,8,0,0,0,0-16H48a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V166.82A104.18,104.18,0,0,0,210.2,155.44Z"></path></svg>`
     };
 
+    // Avatar: 'tooth' draws a white tooth on a brand-colored circle (auto-matches config.color);
+    // any other value is treated as an image URL; empty falls back to the default builtbyjo logo.
+    let avatarInner;
+    if (config.logo === 'tooth') {
+        avatarInner = `<svg viewBox="0 0 24 24" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${config.name}"><circle cx="12" cy="12" r="12" fill="${config.color}"/><g transform="translate(12,12) scale(0.62) translate(-12,-12)"><path fill="#ffffff" d="M12 2C8.5 2 6 4.5 6 8c0 1.5.3 2.6.7 4.2.2.8.4 1.7.6 2.9.3 1.8.4 3.2.6 4.4.2 1.4.4 2.5 1.6 2.5.9 0 1.2-.9 1.4-2.3.1-.8.2-1.8.3-2.9.1-1 .3-1.9.8-1.9s.7.9.8 1.9c.1 1.1.2 2.1.3 2.9.2 1.4.5 2.3 1.4 2.3 1.2 0 1.4-1.1 1.6-2.5.2-1.2.3-2.6.6-4.4.2-1.2.4-2.1.6-2.9.4-1.6.7-2.7.7-4.2 0-3.5-2.5-6-6-6z"/></g></svg>`;
+    } else if (config.logo) {
+        avatarInner = `<img src="${config.logo}" style="width:40px;height:40px;border-radius:50%;" alt="${config.name}">`;
+    } else {
+        avatarInner = `<img src="/widget/logo.png" style="width:40px;height:40px;border-radius:50%;" alt="${config.name}">`;
+    }
+
+    // Footer branding (hidden when data-branding="false")
+    const brandingHtml = config.hideBranding
+        ? ''
+        : `<div class="bj-branding"><a href="https://builtbyjo.co" target="_blank" rel="noopener noreferrer">Powered by builtbyjo</a></div>`;
+
     // Main HTML Structure
     widgetContainer.innerHTML = `
         <div class="bj-window">
             <div class="bj-header">
                 <div class="bj-header-info">
-                    <div class="bj-avatar"><img src="/widget/logo.png" style="width:40px;height:40px;border-radius:50%;" alt="builtbyjo"></div>
+                    <div class="bj-avatar">${avatarInner}</div>
                     <div class="bj-title-area">
                         <div class="bj-name">${config.name}</div>
                         <div class="bj-status">
@@ -649,9 +668,7 @@
                         ${icons.send}
                     </button>
                 </form>
-                <div class="bj-branding">
-                    <a href="https://builtbyjo.co" target="_blank" rel="noopener noreferrer">Powered by builtbyjo</a>
-                </div>
+                ${brandingHtml}
             </div>
         </div>
 
@@ -837,7 +854,7 @@
         } catch (error) {
             console.error('Chat Widget Error:', error);
             hideTyping();
-            addBotMessage("Having trouble connecting. You can reach us at jay@builtbyjo.co");
+            addBotMessage(`Having trouble connecting. You can reach us at ${config.contactEmail}`);
         } finally {
             sendBtn.disabled = false;
             // Reset height
