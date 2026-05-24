@@ -182,7 +182,7 @@ a {
 }
 
 .section {
-    padding: 100px 0;
+    padding: 64px 0;
 }
 
 .section-dark {
@@ -500,7 +500,7 @@ nav {
 /* ==================== HERO SECTIONS ==================== */
 
 .hero {
-    padding: 160px 0 100px;
+    padding: 130px 0 56px;
     text-align: center;
 }
 
@@ -858,7 +858,7 @@ footer {
 .section-header {
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 48px;
+    margin: 0 auto 36px;
 }
 
 .section-header h2 {
