@@ -621,10 +621,13 @@
         reset: `<svg class="bj-reset-icon" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg"><path d="M224,48v48a8,8,0,0,1-8,8H168a8,8,0,0,1,0-16h26.49A88.17,88.17,0,0,0,45.8,92.56a8,8,0,0,1-13.6-8.24A104.18,104.18,0,0,1,199.18,80H176a8,8,0,0,1,0-16h40A8,8,0,0,1,224,48ZM210.2,155.44a8,8,0,0,0-13.6,8.24A88.17,88.17,0,0,1,61.51,152H88a8,8,0,0,0,0-16H48a8,8,0,0,0-8,8v48a8,8,0,0,0,16,0V166.82A104.18,104.18,0,0,0,210.2,155.44Z"></path></svg>`
     };
 
-    // Avatar: 'tooth' draws a white tooth on a brand-colored circle (auto-matches config.color);
+    // Avatar: 'robot' draws a friendly white robot on a brand-colored circle (auto-matches config.color);
+    // 'tooth' draws a white tooth on a brand-colored circle;
     // any other value is treated as an image URL; empty falls back to the default builtbyjo logo.
     let avatarInner;
-    if (config.logo === 'tooth') {
+    if (config.logo === 'robot') {
+        avatarInner = `<svg viewBox="0 0 24 24" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${config.name}"><circle cx="12" cy="12" r="12" fill="${config.color}"/><g fill="#ffffff"><rect x="11.45" y="4.6" width="1.1" height="2.2" rx="0.55"/><circle cx="12" cy="4.1" r="1.05"/><rect x="4.7" y="10.2" width="1.3" height="3.4" rx="0.65"/><rect x="18" y="10.2" width="1.3" height="3.4" rx="0.65"/><rect x="6.4" y="7.2" width="11.2" height="9" rx="2.6"/><rect x="8.4" y="17.4" width="7.2" height="2.6" rx="1.2"/></g><circle cx="9.7" cy="11.2" r="1.15" fill="${config.color}"/><circle cx="14.3" cy="11.2" r="1.15" fill="${config.color}"/><rect x="9.6" y="13.6" width="4.8" height="1.1" rx="0.55" fill="${config.color}"/></svg>`;
+    } else if (config.logo === 'tooth') {
         avatarInner = `<svg viewBox="0 0 24 24" width="40" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="${config.name}"><circle cx="12" cy="12" r="12" fill="${config.color}"/><g transform="translate(12,12) scale(0.62) translate(-12,-12)"><path fill="#ffffff" d="M12 2C8.5 2 6 4.5 6 8c0 1.5.3 2.6.7 4.2.2.8.4 1.7.6 2.9.3 1.8.4 3.2.6 4.4.2 1.4.4 2.5 1.6 2.5.9 0 1.2-.9 1.4-2.3.1-.8.2-1.8.3-2.9.1-1 .3-1.9.8-1.9s.7.9.8 1.9c.1 1.1.2 2.1.3 2.9.2 1.4.5 2.3 1.4 2.3 1.2 0 1.4-1.1 1.6-2.5.2-1.2.3-2.6.6-4.4.2-1.2.4-2.1.6-2.9.4-1.6.7-2.7.7-4.2 0-3.5-2.5-6-6-6z"/></g></svg>`;
     } else if (config.logo) {
         avatarInner = `<img src="${config.logo}" style="width:40px;height:40px;border-radius:50%;" alt="${config.name}">`;
