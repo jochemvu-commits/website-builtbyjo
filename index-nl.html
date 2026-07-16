@@ -415,4 +415,101 @@
                 </div>
 
                 <div class="footer-bottom">
-                  
+                    <p>© 2026 builtbyjo. Alle rechten voorbehouden.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Mobile nav toggle
+        function toggleNav() {
+            document.getElementById('navLinks').classList.toggle('active');
+        }
+
+        document.documentElement.setAttribute('data-theme', 'dark');
+
+        // FAQ accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                if (!isActive) item.classList.add('active');
+            });
+        });
+    </script>
+    <style>
+        /* Portfolio browser frames */
+        .portfolio-card {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .browser-frame {
+            border: 1px solid var(--border-light);
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            background: var(--bg-primary);
+        }
+
+        .browser-bar {
+            display: flex;
+            gap: 6px;
+            padding: 10px 12px;
+            background: var(--bg-card);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .browser-bar .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: var(--text-muted);
+            opacity: 0.4;
+        }
+
+        .browser-screen {
+            aspect-ratio: 16 / 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .browser-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+        }
+
+        .screen-placeholder {
+            font-size: 3rem;
+            opacity: 0.3;
+        }
+
+        .portfolio-card .btn {
+            align-self: flex-start;
+        }
+
+        /* Responsive add-on grid */
+        @media (max-width: 1100px) {
+            .feature-grid[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: repeat(2, 1fr) !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .feature-grid[style*="grid-template-columns: repeat(3"] {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+    <script src="/widget/chat.js?v=site2" data-api="https://builtbyjo-wa-production.up.railway.app/api/chat"
+        data-business-id="builtbyjo" data-name="Jay's Assistent"
+        data-greeting="Hoi! 👋 Ik ben de AI-assistent van Jay. Vraag me gerust iets over websites, AI-add-ons of hoe je kunt starten!"
+        data-color="#3b82f6" data-branding="false" data-contact-email="jay@builtbyjo.co">
+        </script>
+</body>
+
+</html>
