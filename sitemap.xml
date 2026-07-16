@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://builtbyjo.co/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/index-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/index-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/index-nl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/index-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/index-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/index-ro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/index-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/index-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/products</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/products"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/products-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/products-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/products"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/products-nl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/products"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/products-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/products-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/products"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/products-ro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/products"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/products-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/products-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/products"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/about</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/about"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/about-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/about-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/about"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/about-nl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/about"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/about-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/about-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/about"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/about-ro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/about"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/about-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/about-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/about"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/contact</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/contact"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/contact-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/contact-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/contact"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/contact-nl</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/contact"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/contact-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/contact-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/contact"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/contact-ro</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/contact"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/contact-nl"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/contact-ro"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/contact"/>
+  </url>
+</urlset>

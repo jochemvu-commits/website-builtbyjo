@@ -7,8 +7,12 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <title>Contact — Get in Touch | builtbyjo</title>
-    <meta name="description" content="Send us a message and we'll respond within 24 hours. No call needed.">
+    <meta name="description" content="Tell me about your business and your website project. I respond within 24 hours.">
     <link rel="canonical" href="https://builtbyjo.co/contact">
+    <link rel="alternate" hreflang="en" href="https://builtbyjo.co/contact">
+    <link rel="alternate" hreflang="nl" href="https://builtbyjo.co/contact-nl">
+    <link rel="alternate" hreflang="ro" href="https://builtbyjo.co/contact-ro">
+    <link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/contact">
 
     <!-- Open Graph -->
     <meta property="og:image" content="https://builtbyjo.co/og-image.png">
@@ -40,15 +44,17 @@
 
                 <div class="nav-links" id="navLinks">
                     <a href="/">Home</a>
-                    <a href="products.html">Products</a>
+                    <a href="products.html">Services</a>
                     <a href="about.html">About</a>
                     <a href="contact.html" class="active">Contact</a>
                     <div class="nav-lang">
                         <a href="contact.html" class="active">EN</a>
                         <span>|</span>
                         <a href="contact-nl.html">NL</a>
+                        <span>|</span>
+                        <a href="contact-ro.html">RO</a>
                     </div>
-                    <a href="https://tally.so/r/2EDJbM" class="nav-cta">Get started — no call needed →</a>
+                    <a href="#form" class="nav-cta">Start your project →</a>
                 </div>
             </div>
         </nav>
@@ -57,7 +63,7 @@
         <section class="hero section-dark" style="padding-bottom: 40px;">
             <div class="container">
                 <h1>Let's <span class="text-accent">Talk</span></h1>
-                <p>Send a message or just say hi. I respond to everything personally.</p>
+                <p>Tell me about your project or just say hi. I respond to everything personally.</p>
             </div>
         </section>
 
@@ -67,27 +73,22 @@
                 <div
                     style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; max-width: 1100px; margin: 0 auto;">
 
-                    <!-- Left: Get started, no call needed -->
+                    <!-- Left: Start a project -->
                     <div>
-                        <h3 class="mb-3">Get Started — No Call Needed</h3>
-                        <p class="mb-4">No appointment, no sales call. Tell me about your clinic through the form or by
-                            email and I'll get your AI receptionist live on your website within 72 hours.</p>
+                        <h3 class="mb-3">Start Your Project</h3>
+                        <p class="mb-4">No sales call needed. Tell me about your business and what you want your
+                            website to do — through the form or by email — and I'll get back to you with an honest
+                            plan and a price.</p>
 
                         <div class="card" style="background: var(--accent-glow); border-color: var(--accent);">
-                            <p style="color: var(--text-primary); margin-bottom: 20px;">Tell me your clinic's hours,
-                                services, prices, and the questions patients ask most — that's all I need to get
-                                started.</p>
-                            <a href="https://tally.so/r/2EDJbM" class="btn btn-primary">Get started — no call needed →</a>
+                            <p style="color: var(--text-primary); margin-bottom: 20px;">What helps me most: what your
+                                business does, who your customers are, and any websites you like the look of. That's
+                                all I need to get started.</p>
+                            <a href="#form" class="btn btn-primary">Send a message →</a>
                         </div>
-                    </div>
 
-                    <!-- Right: Other contact options -->
-                    <div>
-                        <h3 class="mb-3">Other Ways to Reach Me</h3>
-                        <p class="mb-4">Prefer email? I reply fast.</p>
-
-                        <!-- Quick contact cards -->
-                        <div class="card mb-3" style="display: flex; align-items: center; gap: 16px;">
+                        <!-- Email card -->
+                        <div class="card mt-4" style="display: flex; align-items: center; gap: 16px;">
                             <div
                                 style="width: 48px; height: 48px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
                                 ✉️
@@ -98,31 +99,33 @@
                             </div>
                             <a href="mailto:jay@builtbyjo.co" class="btn btn-sm btn-outline">Send Email →</a>
                         </div>
+                    </div>
 
-                        <!-- Contact form -->
-                        <div class="card mt-5">
+                    <!-- Right: Contact form -->
+                    <div>
+                        <div class="card" id="form">
                             <h4 class="mb-3">Send a Message</h4>
                             <form class="contact-form" action="https://formspree.io/f/mdalkjvv" method="POST">
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
-                                    <input type="text" id="name" name="name" required placeholder="Dr. Sarah Jones">
+                                    <input type="text" id="name" name="name" required placeholder="Sarah Jones">
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="clinic">Clinic Name</label>
-                                    <input type="text" id="clinic" name="clinic" placeholder="Bright Smile Dental">
+                                    <label for="business">Business Name</label>
+                                    <input type="text" id="business" name="business" placeholder="Jones Bakery">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <input type="email" id="email" name="email" required
-                                        placeholder="reception@brightsmile.com">
+                                        placeholder="hello@jonesbakery.com">
                                 </div>
 
                                 <div class="form-group">
                                     <label for="message">Message</label>
                                     <textarea id="message" name="message" required
-                                        placeholder="Tell me about your clinic and what you're looking for..."></textarea>
+                                        placeholder="Tell me about your business and what you're looking for..."></textarea>
                                 </div>
 
                                 <button type="submit" class="btn btn-primary" style="width: 100%;">
@@ -149,10 +152,9 @@
                         <button class="faq-question" style="color: var(--text-dark);">How does getting started
                             work?</button>
                         <div class="faq-answer">
-                            <p>No call needed. You send me your clinic's details — hours, services, prices, and the
-                                questions patients ask most — through a short form or by email. I build your AI
-                                receptionist and install it on your website within 72 hours. You approve everything
-                                before it goes live.</p>
+                            <p>You send me a message about your business and what you need. I'll reply with questions
+                                if I have any, then a plan and a price. Once we agree, I start building — and you see
+                                a first version within days.</p>
                         </div>
                     </div>
 
@@ -170,8 +172,7 @@
                             respond?</button>
                         <div class="faq-answer">
                             <p>Emails usually get a reply within a few hours during working hours, and always within
-                                24 hours. I'm a one-person operation, so I prioritize being responsive — slow
-                                communication is exactly what we help clinics avoid!</p>
+                                24 hours. I'm a one-person operation, so I prioritize being responsive.</p>
                         </div>
                     </div>
                 </div>
@@ -184,22 +185,21 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="/" class="logo">built<span>by</span>jo</a>
-                        <p>AI receptionists for dental clinics. Never miss a patient again.</p>
+                        <p>Websites for small businesses — built with care, by one person.</p>
                     </div>
 
                     <div class="footer-col">
-                        <h5>Products</h5>
+                        <h5>Services</h5>
+                        <a href="products.html">Website Design &amp; Build</a>
                         <a href="products.html#website">Website Chatbot</a>
                         <a href="products.html#whatsapp">WhatsApp AI</a>
                         <a href="products.html#voice">Voice Agent</a>
-                        <a href="products.html#bundle">Bundle Deals</a>
                     </div>
 
                     <div class="footer-col">
                         <h5>Company</h5>
                         <a href="about.html">About</a>
                         <a href="contact.html">Contact</a>
-                        <a href="https://tally.so/r/2EDJbM">Get started →</a>
                     </div>
 
                     <div class="footer-col">
@@ -210,7 +210,6 @@
 
                 <div class="footer-bottom">
                     <p>© 2026 builtbyjo. All rights reserved.</p>
-
                 </div>
             </div>
         </footer>
@@ -247,11 +246,11 @@
             }
         }
     </style>
-    <script src="/widget/chat.js?v=dental1" data-api="https://builtbyjo-wa-production.up.railway.app/api/chat"
-        data-business-id="builtbyjo" data-name="Dental Assistant"
-        data-greeting="Hi there! 👋 I'm the Dental Assistant. I can help with appointments, opening hours, or any quick questions — what can I do for you?" data-color="#3b82f6"
-        data-logo="tooth" data-branding="false" data-contact-email="reception@smiledental.com">
+    <script src="/widget/chat.js?v=site2" data-api="https://builtbyjo-wa-production.up.railway.app/api/chat"
+        data-business-id="builtbyjo" data-name="Jay's Assistant"
+        data-greeting="Hi there! 👋 I'm Jay's AI assistant. Ask me anything about websites, AI add-ons, or how to get started!"
+        data-color="#3b82f6" data-branding="false" data-contact-email="jay@builtbyjo.co">
         </script>
 </body>
 
-</html>
+</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
