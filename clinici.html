@@ -83,11 +83,10 @@
                     🏥 Pentru clinici estetice, medspa-uri &amp; cabinete de injectări
                 </div>
 
-                <h1>Clinica dumneavoastră pierde pacienți în fiecare săptămână din cauza<br><span
-                        class="text-accent">solicitărilor fără răspuns</span>. Noi rezolvăm asta.</h1>
+                <h1>Pierdeți pacienți din cauza <br><span class="text-accent">solicitărilor fără răspuns</span>. <br>Noi rezolvăm asta.</h1>
 
-                <p>Fiecare solicitare primește răspuns în câteva secunde, în limba pacientului, 24/7 — și este
-                    urmărită până devine o programare.</p>
+                <p>Săptămână după săptămână. Noi răspundem fiecărei solicitări în câteva secunde, în limba
+                    pacientului, 24/7 — și revenim până devine o programare.</p>
 
                 <div class="hero-buttons">
                     <a href="contact-ro.html#form" class="btn btn-primary btn-lg js-booking">
@@ -106,8 +105,8 @@
 
                 <p class="text-center" style="font-size: 1.1rem; margin-bottom: 20px;">
                     Solicitările sosesc atunci când echipa dumneavoastră nu este disponibilă: seara, în weekend,
-                    între două tratamente. Prin telefon, prin formularul de pe site și pe Instagram — și acolo rămân.
-                    Ore întregi. Uneori zile.
+                    între două tratamente. Prin telefon, prin formularul de pe site și pe Instagram — și acolo
+                    rămân fără răspuns ore întregi, uneori zile.
                 </p>
 
                 <p class="text-center" style="font-size: 1.1rem;">
@@ -130,7 +129,7 @@
                         programată.</p>
                 </div>
 
-                <div class="steps-grid">
+                <div class="steps-grid steps-grid-5">
                     <div class="step-card">
                         <div class="step-number">1</div>
                         <h4 style="color: var(--text-dark);">Apel pierdut → SMS imediat</h4>
@@ -140,7 +139,7 @@
 
                     <div class="step-card">
                         <div class="step-number">2</div>
-                        <h4 style="color: var(--text-dark);">Formular pe site → răspuns direct</h4>
+                        <h4 style="color: var(--text-dark);">Formular → răspuns imediat</h4>
                         <p>Fiecare formular trimis primește imediat un răspuns personal prin e-mail și SMS. Nu „vă
                             contactăm în cel mai scurt timp" — ci un pas concret următor.</p>
                     </div>
@@ -154,14 +153,14 @@
 
                     <div class="step-card">
                         <div class="step-number">4</div>
-                        <h4 style="color: var(--text-dark);">Urmărire până la programare</h4>
-                        <p>Cine nu se programează imediat primește o revenire prietenoasă în ziua 1, 3 și 7. Iar
-                            programările ratate sunt reprogramate automat.</p>
+                        <h4 style="color: var(--text-dark);">Reveniri în ziua 1, 3 și 7</h4>
+                        <p>Cine nu se programează imediat primește automat o revenire prietenoasă. Iar programările
+                            ratate sunt reprogramate fără niciun efort din partea echipei.</p>
                     </div>
 
                     <div class="step-card">
                         <div class="step-number">5</div>
-                        <h4 style="color: var(--text-dark);">Direct în agenda dumneavoastră</h4>
+                        <h4 style="color: var(--text-dark);">Direct în agenda clinicii</h4>
                         <p>Fiecare programare ajunge direct în agenda clinicii. Un dashboard simplu arată ce a
                             intrat, ce s-a programat și cât aduce.</p>
                     </div>
@@ -313,6 +312,39 @@
     </script>
 
     <style>
+        /* Give the hero headline a little more room so each line stays whole */
+        .hero h1 {
+            max-width: 980px;
+        }
+
+        /* 5 steps: 3 + 2, with the second row centered */
+        .steps-grid-5 {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .steps-grid-5 .step-card {
+            flex: 0 1 calc(33.333% - 22px);
+        }
+
+        @media (max-width: 900px) {
+            .steps-grid-5 .step-card {
+                flex-basis: calc(50% - 16px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .steps-grid-5 .step-card {
+                flex-basis: 100%;
+            }
+
+            /* let the hero headline wrap naturally on small screens */
+            .hero h1 br {
+                display: none;
+            }
+        }
+
         /* Responsive 3-col grid (same override as homepage) */
         @media (max-width: 1100px) {
             .feature-grid[style*="grid-template-columns: repeat(3"] {
