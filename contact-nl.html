@@ -46,6 +46,7 @@
                 <div class="nav-links" id="navLinks">
                     <a href="index-nl.html">Home</a>
                     <a href="products-nl.html">Diensten</a>
+                    <a href="klinieken.html">Klinieken</a>
                     <a href="about-nl.html">Over mij</a>
                     <a href="contact-nl.html" class="active">Contact</a>
                     <div class="nav-lang">
@@ -86,6 +87,19 @@
                                 je bedrijf doet, wie je klanten zijn en websites waarvan je de stijl mooi vindt. Meer
                                 heb ik niet nodig om te starten.</p>
                             <a href="#form" class="btn btn-primary">Stuur een bericht →</a>
+                        </div>
+
+                        <!-- Clinic pointer -->
+                        <div class="card mt-4" style="display: flex; align-items: center; gap: 16px;">
+                            <div
+                                style="width: 48px; height: 48px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🏥
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="margin-bottom: 4px;">Kliniek?</h4>
+                                <p class="text-muted" style="margin: 0;">Medspa, laser- of cosmetische kliniek — bekijk hoe ik uw aanvragen omzet in boekingen.</p>
+                            </div>
+                            <a href="klinieken.html" class="btn btn-sm btn-outline">Bekijk hier →</a>
                         </div>
 
                         <!-- Email card -->
@@ -192,6 +206,7 @@
                     <div class="footer-col">
                         <h5>Diensten</h5>
                         <a href="products-nl.html">Website Ontwerp &amp; Bouw</a>
+                        <a href="klinieken.html">Leadopvolging voor klinieken</a>
                         <a href="products-nl.html#website">Website Chatbot</a>
                         <a href="products-nl.html#whatsapp">WhatsApp AI</a>
                         <a href="products-nl.html#voice">Voice Agent</a>
@@ -246,6 +261,12 @@
                 gap: 48px !important;
             }
         }
+
+        @media (max-width: 600px) {
+            .card[style*="display: flex"][style*="gap: 16px"] {
+                flex-wrap: wrap;
+            }
+        }
     </style>
     <script src="/widget/chat.js?v=site3" data-api="https://builtbyjo-wa-production.up.railway.app/api/chat"
         data-business-id="builtbyjo" data-name="Jay's Assistent"
@@ -254,4 +275,4 @@
         </script>
 </body>
 
-</html>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                
+</html>

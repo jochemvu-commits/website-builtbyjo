@@ -46,6 +46,7 @@
                 <div class="nav-links" id="navLinks">
                     <a href="index-ro.html">Acasă</a>
                     <a href="products-ro.html">Servicii</a>
+                    <a href="clinici.html">Clinici</a>
                     <a href="about-ro.html">Despre mine</a>
                     <a href="contact-ro.html" class="active">Contact</a>
                     <div class="nav-lang">
@@ -86,6 +87,19 @@
                                 se ocupă afacerea ta, cine sunt clienții tăi și site-uri al căror stil îți place. Atât
                                 îmi trebuie ca să încep.</p>
                             <a href="#form" class="btn btn-primary">Trimite un mesaj →</a>
+                        </div>
+
+                        <!-- Clinic pointer -->
+                        <div class="card mt-4" style="display: flex; align-items: center; gap: 16px;">
+                            <div
+                                style="width: 48px; height: 48px; background: var(--accent); border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem;">
+                                🏥
+                            </div>
+                            <div style="flex: 1;">
+                                <h4 style="margin-bottom: 4px;">Aveți o clinică?</h4>
+                                <p class="text-muted" style="margin: 0;">Medspa, clinică laser sau estetică — vedeți cum transform solicitările în programări.</p>
+                            </div>
+                            <a href="clinici.html" class="btn btn-sm btn-outline">Vedeți aici →</a>
                         </div>
 
                         <!-- Email card -->
@@ -192,6 +206,7 @@
                     <div class="footer-col">
                         <h5>Servicii</h5>
                         <a href="products-ro.html">Design &amp; Construcție Site</a>
+                        <a href="clinici.html">Conversie lead-uri pentru clinici</a>
                         <a href="products-ro.html#website">Chatbot pentru site</a>
                         <a href="products-ro.html#whatsapp">AI WhatsApp</a>
                         <a href="products-ro.html#voice">Agent Vocal</a>
@@ -244,6 +259,12 @@
             section.section-dark>.container>div[style*="grid-template-columns"] {
                 grid-template-columns: 1fr !important;
                 gap: 48px !important;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .card[style*="display: flex"][style*="gap: 16px"] {
+                flex-wrap: wrap;
             }
         }
     </style>

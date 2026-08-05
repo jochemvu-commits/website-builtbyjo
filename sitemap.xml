@@ -85,4 +85,25 @@
     <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/contact-ro"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/contact"/>
   </url>
+  <url>
+    <loc>https://builtbyjo.co/clinics</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/clinics"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/klinieken"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/clinici"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/clinics"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/klinieken</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/clinics"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/klinieken"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/clinici"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/clinics"/>
+  </url>
+  <url>
+    <loc>https://builtbyjo.co/clinici</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://builtbyjo.co/clinics"/>
+    <xhtml:link rel="alternate" hreflang="nl" href="https://builtbyjo.co/klinieken"/>
+    <xhtml:link rel="alternate" hreflang="ro" href="https://builtbyjo.co/clinici"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://builtbyjo.co/clinics"/>
+  </url>
 </urlset>
