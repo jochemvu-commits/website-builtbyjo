@@ -39,7 +39,7 @@
         // BOOKING_LINK — replace this URL with your Calendly/Cal.com link.
         // All "Book a 15-minute call →" buttons on this page use it.
         // ============================================================
-        const BOOKING_LINK = "contact.html#form";
+        const BOOKING_LINK = "https://calendly.com/builtbyjo/free-call";
     </script>
 </head>
 
@@ -268,16 +268,13 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="/" class="logo">built<span>by</span>jo</a>
-                        <p>Websites for small businesses — built with care, by one person.</p>
+                        <p>Websites &amp; automation for small businesses — built with care, by one person.</p>
                     </div>
 
                     <div class="footer-col">
                         <h5>Services</h5>
-                        <a href="products.html">Website Design &amp; Build</a>
-                        <a href="clinics.html">Clinic Lead Conversion</a>
-                        <a href="products.html#website">Website Chatbot</a>
-                        <a href="products.html#whatsapp">WhatsApp AI</a>
-                        <a href="products.html#voice">Voice Agent</a>
+                        <a href="products.html">Websites</a>
+                        <a href="clinics.html">For clinics</a>
                     </div>
 
                     <div class="footer-col">
@@ -307,7 +304,7 @@
         document.documentElement.setAttribute('data-theme', 'dark');
 
         // Point all booking CTAs at BOOKING_LINK
-        document.querySelectorAll('a.js-booking').forEach(a => { a.href = BOOKING_LINK; });
+        document.querySelectorAll('a.js-booking').forEach(a => { a.href = BOOKING_LINK; a.target = '_blank'; a.rel = 'noopener'; });
     </script>
 
     <style>

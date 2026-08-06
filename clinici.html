@@ -39,7 +39,7 @@
         // BOOKING_LINK — înlocuiți acest URL cu linkul dvs. Calendly/Cal.com.
         // Toate butoanele „Programați 15 minute →" de pe această pagină îl folosesc.
         // ============================================================
-        const BOOKING_LINK = "contact-ro.html#form";
+        const BOOKING_LINK = "https://calendly.com/builtbyjo/free-call";
     </script>
 </head>
 
@@ -269,16 +269,13 @@
                 <div class="footer-grid">
                     <div class="footer-brand">
                         <a href="index-ro.html" class="logo">built<span>by</span>jo</a>
-                        <p>Site-uri web pentru afaceri mici — construite cu grijă, de o singură persoană.</p>
+                        <p>Site-uri web &amp; automatizări pentru afaceri mici — construite cu grijă, de o singură persoană.</p>
                     </div>
 
                     <div class="footer-col">
                         <h5>Servicii</h5>
-                        <a href="products-ro.html">Design &amp; Construcție Site</a>
-                        <a href="clinici.html">Conversie lead-uri pentru clinici</a>
-                        <a href="products-ro.html#website">Chatbot pentru site</a>
-                        <a href="products-ro.html#whatsapp">AI WhatsApp</a>
-                        <a href="products-ro.html#voice">Agent Vocal</a>
+                        <a href="products-ro.html">Site-uri web</a>
+                        <a href="clinici.html">Pentru clinici</a>
                     </div>
 
                     <div class="footer-col">
@@ -308,7 +305,7 @@
         document.documentElement.setAttribute('data-theme', 'dark');
 
         // Toate butoanele de programare folosesc BOOKING_LINK
-        document.querySelectorAll('a.js-booking').forEach(a => { a.href = BOOKING_LINK; });
+        document.querySelectorAll('a.js-booking').forEach(a => { a.href = BOOKING_LINK; a.target = '_blank'; a.rel = 'noopener'; });
     </script>
 
     <style>
